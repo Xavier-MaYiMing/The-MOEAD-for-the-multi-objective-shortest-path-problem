@@ -400,7 +400,7 @@ def main(network, source, destination, h):
                     item = EP[ind]
                     item_obj = item['objective']
                     if pareto_dominated(item_obj, child_obj):
-                        need_to_remove.append(ind)
+                        need_to_remove.append(item)
                     if flag1 and pareto_dominated(child_obj, item_obj):
                         flag1 = False
                 for item in need_to_remove:
